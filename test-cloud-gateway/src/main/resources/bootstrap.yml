@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: test-cloud-gateway
+  cloud:
+    config:
+      uri: http://localhost:9000/
+
+zuul:
+  routes:
+    user:
+      path: /user/**
+      serviceId: test-cloud-provider-user
+    coupon:
+      path: /coupon/**
+      serviceId: test-cloud-consumer-coupon
+    order:
+      path: /order/**
+      serviceId: test-cloud-order
+
+
+
+

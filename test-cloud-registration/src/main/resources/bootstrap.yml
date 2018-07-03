@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: test-cloud-registration
+  cloud:
+    config:
+      uri: http://localhost:9000/

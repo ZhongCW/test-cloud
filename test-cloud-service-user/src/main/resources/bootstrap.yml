@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: test-cloud-service-user
+  cloud:
+   config:
+    uri: http://localhost:9000/
+
+
