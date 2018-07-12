@@ -2,7 +2,17 @@ spring:
   application:
     name: test-cloud-service-user
   cloud:
-   config:
-    uri: http://localhost:9000/
-
+    config:
+      uri: http://localhost:9000/
+    stream:
+      bindings:
+        user-register:
+          destination: user # exchange
+          group: user-register # queue
+  rabbitmq:
+    virtual-host: ZCW
+    host: 193.112.122.215
+    port: 5672
+    username: zcw
+    password: 123456
 

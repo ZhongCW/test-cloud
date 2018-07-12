@@ -1,10 +1,12 @@
 package test.cloud.service.coupon.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import test.cloud.service.coupon.entity.Coupon;
+import test.cloud.service.coupon.service.CouponService;
 
 import java.math.BigDecimal;
 import java.util.Date;

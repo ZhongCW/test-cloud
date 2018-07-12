@@ -5,3 +5,8 @@ spring:
     config:
       uri: http://localhost:9000/
 
+feign:
+  hystrix:
+    enabled: true
+
+

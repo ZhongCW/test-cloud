@@ -9,14 +9,15 @@ zuul:
   routes:
     user:
       path: /user/**
-      serviceId: test-cloud-provider-user
+      serviceId: test-cloud-service-user
     coupon:
       path: /coupon/**
-      serviceId: test-cloud-consumer-coupon
+      serviceId: test-cloud-service-coupon
     order:
       path: /order/**
-      serviceId: test-cloud-order
-
+      serviceId: test-cloud-service-order
+#  host:
+#    connect-timeout-millis: 10000 # 请求超时时间
 
 
 

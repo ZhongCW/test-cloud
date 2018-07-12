@@ -26,6 +26,11 @@
     </properties>
 
     <dependencies>
+        <!-- 消息驱动 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-stream-rabbit</artifactId>
+        </dependency>
         <!-- 接入 配置中心 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

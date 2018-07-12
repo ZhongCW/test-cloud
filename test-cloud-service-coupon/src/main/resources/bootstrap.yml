@@ -4,3 +4,24 @@ spring:
   cloud:
     config:
       uri: http://localhost:9000/
+# Stream
+    stream:
+      bindings:
+        user-register:
+          destination: user # exchange
+          group: user-register # queue
+          consumer:
+            cconcurrency: 3
+#      instance-index: 2
+#      instance-count: 3
+#        output:
+#          destination: coupon-output
+  rabbitmq:
+    virtual-host: ZCW
+    host: 193.112.122.215
+    port: 5672
+    username: zcw
+    password: 123456
+
+
+

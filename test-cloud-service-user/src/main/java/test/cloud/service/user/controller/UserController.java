@@ -1,16 +1,15 @@
 package test.cloud.service.user.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import test.cloud.service.coupon.entity.Coupon;
 import test.cloud.service.user.dao.UserRepository;
 import test.cloud.service.user.po.User;
 import test.cloud.service.user.service.CouponService;
+import test.cloud.service.user.service.UserService;
 
 import java.util.List;
+import java.util.Random;
 
 
 @RestController
@@ -18,6 +17,8 @@ import java.util.List;
 public class UserController {
   @Autowired
   private UserRepository userRepository;
+  @Autowired
+  private UserService userService;
 
   @GetMapping("/{id}")
   public User getUser(@PathVariable Long id) {
@@ -32,6 +33,12 @@ public class UserController {
   @GetMapping("/{id}/coupon")
   public List<Coupon> getUserCouponList(@PathVariable Long id){
     return couponService.getUserCouponList(id);
+  }
+
+  @GetMapping("/register")
+  public String register(){
+    userService.register(new User(new Random().nextLong()));
+    return "sucess";
   }
 
 }

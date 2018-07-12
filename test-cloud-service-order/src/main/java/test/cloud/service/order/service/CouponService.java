@@ -5,12 +5,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import test.cloud.service.coupon.entity.Coupon;
+import test.cloud.service.order.service.fallback.CouponServiceFallback;
 
-@FeignClient("test-cloud-service-coupon")
-@RequestMapping("/coupon")
+@FeignClient(value = "test-cloud-service-coupon",fallback = CouponServiceFallback.class)
+//@RequestMapping("/coupon")
 public interface CouponService {
 
-    @GetMapping("/{id}")
+    @GetMapping("/coupon/{id}")
     public Coupon getCoupon(@PathVariable("id") Long id);
 
 }

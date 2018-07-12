@@ -1,6 +1,7 @@
 package test.cloud.service.user.fallback;
 
-import test.cloud.consumer.coupon.entity.Coupon;
+import test.cloud.service.coupon.entity.Coupon;
+import test.cloud.service.coupon.entity.Coupon;
 import test.cloud.service.user.service.CouponService;
 
 import java.util.ArrayList;

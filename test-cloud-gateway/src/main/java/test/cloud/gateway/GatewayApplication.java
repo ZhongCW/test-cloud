@@ -22,7 +22,7 @@ public class GatewayApplication {
         SpringApplication.run(GatewayApplication.class,args);
     }
 
-    @Bean
+//    @Bean
     public ZuulFilter LoginFilter(){
         return new AuthenticationFilter();
     }
