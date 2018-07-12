@@ -8,6 +8,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>1.5.9.RELEASE</version>
+        <!--<version>1.5.13.RELEASE</version>-->
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     
@@ -49,11 +50,12 @@
     </dependencyManagement>
 
     <dependencies>
-        <!--<dependency>-->
-            <!--<groupId>com.zhongcw.test.test-cloud</groupId>-->
-            <!--<artifactId>test-cloud-common</artifactId>-->
-            <!--<version>1.0.0</version>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>com.zhongcw.test.test-cloud</groupId>
+            <artifactId>test-cloud-common</artifactId>
+            <version>1.0.0</version>
+            <!--<scope>runtime</scope>-->
+        </dependency>
         <!-- 添加程序监控 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
